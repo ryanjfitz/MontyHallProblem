@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MontyHallProblem.Tests/MontyHallProblem.Tests.csproj" />
+  <Project Path="MontyHallProblem/MontyHallProblem.csproj" />
+</Solution>

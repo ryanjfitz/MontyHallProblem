@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="TUnit" Version="0.18.60" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MontyHallProblem\MontyHallProblem.csproj" />
+    </ItemGroup>
+
+</Project>
