@@ -12,13 +12,12 @@ public class Tests
     }
 
     [Test]
-    [Arguments(1)]
-    [Arguments(2)]
-    [Arguments(3)]
-    public async Task Host_should_reveal_a_losing_door_after_contestant_makes_first_choice(int winningDoor)
+    [MatrixDataSource]
+    public async Task Host_should_reveal_a_losing_door_after_contestant_makes_first_choice(
+        [Matrix(1, 2, 3)] int winningDoor,
+        [Matrix(1, 2, 3)] int initialDoorChoice)
     {
         Game game = new Game(winningDoor);
-        int initialDoorChoice = 1;
         game.ContestantChooseDoor(initialDoorChoice);
         int losingDoor = game.HostRevealOneLosingDoor();
         await Assert.That(losingDoor).IsNotEqualTo(winningDoor);
